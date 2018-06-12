@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 
 module Vehicle {
-  class Sedan {
+  export class Sedan {
     make: string;
     model: string;
     year: number;
@@ -14,7 +14,7 @@ module Vehicle {
 
     }
   }
-  const honda = new Sedan('Honda', 'Civic', 2019);
+ export const honda = new Sedan('Honda', 'Civic', 2019);
 }
 
 
@@ -25,4 +25,6 @@ module Vehicle {
 })
 export class AppComponent {
   title = 'app';
+  ford = new Vehicle.Sedan('Ford', 'Taurus', 2017);
+  honda = {make: 'Honda', model: 'CRV', year: 2017};
 }
